@@ -10,6 +10,7 @@ import io.avinashraut.springstarter.dao.Customer;
 import io.avinashraut.springstarter.services.LoginServices;
 
 @RestController
+@RequestMapping("/rest/users")
 public class CustomerLogin {
 	
 	@Autowired
