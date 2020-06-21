@@ -1,8 +1,8 @@
-package io.avinashraut.springstarter.services;
+package io.damonP.springstarter.services;
 
 import org.springframework.stereotype.Service;
 
-import io.avinashraut.springstarter.dao.Customer;
+import io.damonP.springstarter.dao.Customer;
 
 @Service
 public class LoginServices {

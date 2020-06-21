@@ -1,11 +1,11 @@
-package io.avinashraut.springstarter.services;
+package io.damonP.springstarter.services;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-import io.avinashraut.springstarter.dao.Customer;
-import io.avinashraut.springstarter.repository.UserRepository;
+import io.damonP.springstarter.dao.Customer;
+import io.damonP.springstarter.repository.UserRepository;
 
 @EnableMongoRepositories(basePackageClasses = UserRepository.class)
 @Configuration
