@@ -1,4 +1,4 @@
-package io.avinashraut.springstarter.controller;
+package io.damonP.springstarter.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import io.avinashraut.springstarter.dao.Customer;
-import io.avinashraut.springstarter.services.LoginServices;
+import io.damonP.springstarter.dao.Customer;
+import io.damonP.springstarter.services.LoginServices;
 
 @RestController
 public class CustomerLogin {
@@ -17,7 +17,7 @@ public class CustomerLogin {
 
 	@RequestMapping("/getProfileDetails")
 	public String getProfile() {
-		return "avinash raut";
+		return "Welcome 2020";
 	}
 	
 	@RequestMapping(method=RequestMethod.POST, value="/createProfile")

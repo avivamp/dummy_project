@@ -1,4 +1,4 @@
-package io.avinashraut.springstarter.dao;
+package io.damonP.springstarter.dao;
 
 public class Customer {
 	
