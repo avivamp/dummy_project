@@ -36,4 +36,9 @@ public class LoginController {
 	public String createProfile(@RequestBody Customer customer) {
 		return loginServices.addprofile(customer);
 	}
+	
+	@RequestMapping(method=RequestMethod.POST, value="/login")
+	public String userLogin(@RequestBody Customer customer) {
+		return loginServices.userLogin(customer);
+	}
 }
