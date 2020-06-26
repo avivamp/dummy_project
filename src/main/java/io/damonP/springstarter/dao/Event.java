@@ -1,67 +1,111 @@
 package io.damonP.springstarter.dao;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document
 public class Event {
 
-	private String event_id;
-	private String event_name;
-	private String event_time;
-	private String event_date;
-	private int duration;
+	@Id
+	private Integer id;
+	private String name;
+	private String time;
+	private String date;
+	private Integer duration;
 	private String city;
 	private String category;
+	private String shortDescription;
+	private String longDescription;
 
 	public Event() {
-}
-	public Event(String event_id, String event_name, String event_time, String event_date, int duration, String city, String category) {
+	}
+
+	public Event(Integer id, String name, String time, String date, Integer duration, String city, String category,
+			String shortDescription, String longDescription) {
 		super();
-		this.event_id = event_id;
-		this.event_name = event_name;
-		this.event_time = event_time;
-		this.event_date = event_date;
+		this.id = id;
+		this.name = name;
+		this.time = time;
+		this.date = date;
 		this.duration = duration;
 		this.city = city;
 		this.category = category;
+		this.shortDescription = shortDescription;
+		this.longDescription = longDescription;
 	}
-	public String getEvent_time() {
-		return event_time;
+
+	public Integer getId() {
+		return id;
 	}
-	public String getEvent_date() {
-		return event_date;
+
+	public void setId(Integer id) {
+		this.id = id;
 	}
-	public void setEvent_date(String event_date) {
-		this.event_date = event_date;
+
+	public String getName() {
+		return name;
 	}
-	public void setEvent_time(String event_time) {
-		this.event_time = event_time;
+
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getEvent_id() {
-		return event_id;
+
+	public String getTime() {
+		return time;
 	}
-	public void setEvent_id(String event_id) {
-		this.event_id = event_id;
+
+	public void setTime(String time) {
+		this.time = time;
 	}
-	public String getEvent_name() {
-		return event_name;
+
+	public String getDate() {
+		return date;
 	}
-	public void setEvent_name(String event_name) {
-		this.event_name = event_name;
+
+	public void setDate(String date) {
+		this.date = date;
 	}
-	public int getDuration() {
+
+	public Integer getDuration() {
 		return duration;
 	}
-	public void setDuration(int duration) {
+
+	public void setDuration(Integer duration) {
 		this.duration = duration;
 	}
+
 	public String getCity() {
 		return city;
 	}
+
 	public void setCity(String city) {
 		this.city = city;
 	}
+
 	public String getCategory() {
 		return category;
 	}
+
 	public void setCategory(String category) {
 		this.category = category;
 	}
+
+	public String getShortDescription() {
+		return shortDescription;
+	}
+
+	public void setShortDescription(String shortDescription) {
+		this.shortDescription = shortDescription;
+	}
+
+	public String getLongDescription() {
+		return longDescription;
+	}
+
+	public void setLongDescription(String longDescription) {
+		this.longDescription = longDescription;
+	}
+	
+	
 }
+	
