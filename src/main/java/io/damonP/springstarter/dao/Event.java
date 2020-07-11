@@ -1,5 +1,7 @@
 package io.damonP.springstarter.dao;
 
+import java.util.List;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -14,14 +16,17 @@ public class Event {
 	private Integer duration;
 	private String city;
 	private String category;
+	private List<Image> images;
 	private String shortDescription;
 	private String longDescription;
 
 	public Event() {
 	}
 
+
+
 	public Event(Integer id, String name, String time, String date, Integer duration, String city, String category,
-			String shortDescription, String longDescription) {
+			List<Image> images, String shortDescription, String longDescription) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -30,9 +35,12 @@ public class Event {
 		this.duration = duration;
 		this.city = city;
 		this.category = category;
+		this.images = images;
 		this.shortDescription = shortDescription;
 		this.longDescription = longDescription;
 	}
+
+
 
 	public Integer getId() {
 		return id;
@@ -88,6 +96,14 @@ public class Event {
 
 	public void setCategory(String category) {
 		this.category = category;
+	}
+	
+	public List<Image> getImages() {
+		return images;
+	}
+
+	public void setImages(List<Image> images) {
+		this.images = images;
 	}
 
 	public String getShortDescription() {
