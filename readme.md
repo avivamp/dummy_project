@@ -10,4 +10,10 @@ Setup Steps:-
 4. Message Broker (RabbitMq)
 	- http://localhost:15672 (UI)
 	- Run "brew services start rabbitmq" or "rabbitmq-server" to start the server
-5. Caching (Redis) 
+5. Caching (Redis)
+	- src>redis.server
+	- src>redis.cli
+	
+DB Details:-
+DB - site_event
+Collection - customer, event, order

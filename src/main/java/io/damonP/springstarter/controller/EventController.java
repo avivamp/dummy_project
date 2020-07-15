@@ -3,6 +3,8 @@ package io.damonP.springstarter.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,12 +21,14 @@ public class EventController {
 	
 	@Autowired
 	private EventServices eventServices;
-
+	
+	@CacheEvict(value = "events", allEntries=true)
 	@RequestMapping(method=RequestMethod.POST, value="/create")
 	public String createEvent(@RequestBody Event eventDetails) {
 		return eventServices.addEvent(eventDetails);
 	}
 	
+	@Cacheable(value = "events")
     @RequestMapping("/listAll")
     public List<Event> listAllEvents() {
     	return eventServices.listEvents();

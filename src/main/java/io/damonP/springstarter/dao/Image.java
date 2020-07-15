@@ -1,6 +1,10 @@
 package io.damonP.springstarter.dao;
 
-public class Image {
+import java.io.Serializable;
+
+public class Image  implements Serializable{
+	
+	private static final long serialVersionUID = 8156526077883281623L;
 	
 	private String url;
 	private String tag;
